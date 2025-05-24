@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lettre virtuelle avec enveloppe</title>
+  <style>
+    body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #e0e0e0; margin:0; }
+    .envelope { position: relative; width: 320px; height: 220px; perspective: 800px; }
+    .back, .flap { position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: 1px solid #888; background: #fff; transform-style: preserve-3d; transition: transform 0.8s ease-in-out; }
+    .flap { transform-origin: top center; z-index: 2; }
+    .open .flap { transform: rotateX(-180deg); }
+    .letter { position: absolute; top: 20px; left: 20px; width: 280px; height: 180px; background: #fdfdfd; border:1px solid #aaa; padding: 15px; box-sizing: border-box; opacity: 0; overflow-y: auto; transition: opacity 0.5s 0.6s ease-in-out; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.4; }
+    .open .letter { opacity: 1; }
+    .button { position: absolute; bottom: 10px; width: 100%; text-align: center; }
+    button { padding: 8px 16px; font-size: 14px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="envelope" id="env">
+    <div class="back"></div>
+    <div class="flap"></div>
+    <div class="letter">
+      <!-- Texte sur l'enveloppe -->
+      <p><strong>Nom : </strong>Jupolli</p>
+      <p><strong>Prénom : </strong>Emma</p>
+      <p><strong>Adresse : </strong>Metro 8, Liberté</p>
+      <p><strong>THÉMATIQUE : </strong>BIRTHDAY TIME</p>
+      <hr>
+      <!-- Contenu de la lettre -->
+      <p>Chère Emush,</p>
+      <p>C’est l’heure du Birthday Time !</p>
+      <p>J’espère que tu es prête.</p>
+      <p>Ton anniversaire sera fêté le samedi 14 juin de 00H00 à 00H00.</p>
+      <h4>Les consignes</h4>
+      <p>Tu as le droit à cinq questions.</p>
+      <p>Attention, la question ne sera valide que si elle contient un seul mot suivi d’un point d’interrogation (<em>POURQUOI ?</em>).</p>
+      <p>Je me ferai le plus grand plaisir de répondre à chacune de tes questions … À MA MANIÈRE 🙃</p>
+      <h4>Un conseil ?</h4>
+      <p>Reste forte sur tes pates.</p>
+      <h4>L’info du jour</h4>
+      <p>Tout le monde est au courant 🙃</p>
+      <p>Bon courage et bienvenue à bord de ce Birthday Time deuxième édition !</p>
+      <p>Cordialement,</p>
+      <p>Budalla,</p>
+      <p>Shendrit Berisha</p>
+    </div>
+  </div>
+  <div class="button">
+    <button onclick="document.getElementById('env').classList.toggle('open')">Ouvrir / Fermer</button>
+  </div>
+</body>
+</html>
