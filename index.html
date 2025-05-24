@@ -8,17 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #e0e0e0; margin:0; }
-    .envelope { position: relative; width: 380px; height: 260px; perspective: 800px; }
+    .envelope { position: relative; width: 1600px; height: 1080px; perspective: 1600px; }
     .back, .flap { position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: 1px solid #888; background: #fff; transform-style: preserve-3d; transition: transform 0.8s ease-in-out; }
-    .flap { transform-origin: top center; z-index: 2; /* texte avant ouverture */ font-family: 'Dancing Script', cursive; font-size: 16px; color: #333; padding: 20px; box-sizing: border-box; }
+    .flap { transform-origin: top center; z-index: 2; /* texte avant ouverture */ font-family: 'Dancing Script', cursive; font-size: 32px; color: #333; padding: 40px; box-sizing: border-box; }
     .open .flap { transform: rotateX(-180deg); }
     .envelope-info { margin:0; }
-    .letter { position: absolute; top: 20px; left: 20px; width: 340px; height: 220px; background: #fdfdfd; border:1px solid #aaa; padding: 20px; box-sizing: border-box; opacity: 0; overflow-y: auto; transition: opacity 0.5s 0.6s ease-in-out; font-family: Aptos, sans-serif; font-size: 18px; line-height: 1.6; }
+    .letter { position: absolute; top: 40px; left: 40px; width: 1440px; height: 900px; background: #fdfdfd; border:1px solid #aaa; padding: 40px; box-sizing: border-box; opacity: 0; overflow-y: auto; transition: opacity 0.5s 0.6s ease-in-out; font-family: Aptos, sans-serif; font-size: 18px; line-height: 1.6; }
     .open .letter { opacity: 1; }
-    .button { position: absolute; bottom: 10px; width: 100%; text-align: center; }
-    button { padding: 8px 16px; font-size: 14px; cursor: pointer; }
+    .letter h4 { font-size: 32px; }
+    .button { position: absolute; bottom: 20px; width: 100%; text-align: center; }
+    button { padding: 12px 24px; font-size: 18px; cursor: pointer; }
+    /* Styling gras et soulignements */
     .letter strong { color: red; font-weight: bold; }
-    .letter .author { color: black; font-weight: bold; text-decoration: underline; }
+    /* Un type de question */
+    .letter .question { color: black; text-decoration: underline; font-weight: bold; }
   </style>
 </head>
 <body>
@@ -39,16 +42,16 @@
       <p>Ton anniversaire sera fêté le <strong>samedi 14 juin</strong> de <strong>00H00 à 00H00</strong>.</p>
       <h4>Les consignes</h4>
       <p>Tu as le droit à <strong>cinq questions</strong>.</p>
-      <p><strong>Un type de question valable ? : POURQUOI ?</strong></p>
-      <p>Je me ferai le plus grand plaisir de répondre à chacune de tes questions … À MA MANIÈRE 🙃</p>
+      <p class="question">Un type de question valable ? : <em>POURQUOI ?</em></p>
+      <p>Je me ferai le plus grand plaisir de répondre à chacune de tes questions …</p>
       <h4>Un conseil ?</h4>
       <p>Reste forte sur tes pates.</p>
       <h4>L’info du jour</h4>
-      <p>Tout le monde est au courant 🙃</p>
+      <p>Tout le monde est au courant ...</p>
       <p>Bon courage et bienvenue à bord de ce <strong>Birthday Time</strong> deuxième édition !</p>
       <p>Cordialement,</p>
       <p class="author">Budalla,</p>
-      <p class="author">Shendrit Berisha</p>
+      <p style="font-family:'Dancing Script', cursive; margin:0;">Shendrit Berisha</p>
     </div>
   </div>
   <div class="button">
