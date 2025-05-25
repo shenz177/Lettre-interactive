@@ -39,11 +39,10 @@
       z-index: 2;
       font-family: 'Dancing Script', cursive;
       box-sizing: border-box;
-      padding: 30px;
+      padding: 30px 30px 60px; /* espace en bas pour remonter la thématique */
       display: flex;
       flex-direction: column;
     }
-    /* Étiquettes en gras, alignement spécifique */
     .flap p {
       font-size: 48px;
       font-style: italic;
@@ -53,14 +52,16 @@
     .flap p:nth-child(2),
     .flap p:nth-child(3) {
       text-align: left;
-      margin-left: 30px;
     }
     .flap p strong {
       font-weight: bold;
     }
     .flap p.theme {
+      margin-top: auto; /* pousse le paragraphe verticalement */
       text-align: center;
-      margin-top: auto;
+    }
+    .flap p.theme span {
+      text-decoration: underline;
     }
     .envelope.open .flap {
       transform: rotateX(-180deg);
@@ -130,8 +131,8 @@
       <p><strong>Nom :</strong> Jupolli</p>
       <p><strong>Prénom :</strong> Emma</p>
       <p><strong>Adresse :</strong> Metro 8, Liberté</p>
-      <!-- Thématique centrée en bas du flap -->
-      <p class="theme"><strong>Thématique :</strong> Birthday Time</p>
+      <!-- Thématique remontée et soulignée -->
+      <p class="theme"><strong>Thématique :</strong> <span>Birthday Time</span></p>
     </div>
 
     <div class="letter">
@@ -143,23 +144,23 @@
 
       <!-- Consignes -->
       <h4>Les consignes</h4>
-      <p>Tu as le droit à cinq questions</p>
+      <p>Tu as le droit à cinq questions...</p>
       <p>
         Attention, la question sera valide seulement si elle contient un seul mot suivi d’un point d’interrogation.<br>
         Un type de question possible : <em>POURQUOI ?</em><br>
-        Je me ferai le plus grand plaisir de répondre à chacune de tes questions… À MA MANIÈRE 🙃
+        Je me ferai le plus grand plaisir de répondre à chacune de tes questions… 🙃
       </p>
 
       <!-- Conseil -->
       <h4>Un conseil ?</h4>
-      <p>Reste forte sur tes pattes</p>
+      <p>Reste forte sur tes pattes…</p>
 
       <!-- Info du jour -->
       <h4>L’info du jour</h4>
       <p>Tout le monde est au courant…</p>
 
       <!-- Dernier mot ajusté -->
-      <h4>Un dernier mot </h4>
+      <h4>Un dernier mot ...</h4>
 
       <!-- Conclusion & signatures -->
       <p>Bon courage et bienvenue à bord de ce Birthday Time deuxième édition !</p>
