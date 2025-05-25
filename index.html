@@ -42,7 +42,6 @@
       box-sizing: border-box;
       color: #333;
     }
-    /* Texte sur le flap : seule la partie avant ":" est en gras */
     .flap p {
       margin: 10px 0;
       font-size: 32px;
@@ -70,6 +69,7 @@
       transition: opacity 0.5s 0.6s ease;
       font-family: 'Aptos', sans-serif;
       text-align: center;
+      z-index: 3;
     }
     .envelope.open .letter {
       opacity: 1;
@@ -114,7 +114,6 @@
   <div class="envelope" id="env">
     <div class="back"></div>
     <div class="flap">
-      <!-- Seule la partie avant ":" est en <strong> -->
       <p><strong>Nom</strong> : Jupolli</p>
       <p><strong>Prénom</strong> : Emma</p>
       <p><strong>Adresse</strong> : Metro 8, Liberté</p>
@@ -122,7 +121,6 @@
     </div>
 
     <div class="letter">
-      <!-- Votre lettre ici -->
       <p>Chère Emma,</p>
       <h4>Les consignes</h4>
       <p>Tu as le droit à cinq questions...</p>
