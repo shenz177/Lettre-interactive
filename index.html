@@ -39,15 +39,17 @@
       z-index: 2;
       font-family: 'Dancing Script', cursive;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
+      padding: 0 30px;
     }
     .flap p {
       font-size: 48px;
       font-weight: bold;
       font-style: italic;
-      margin: 0;
+      margin: 5px 0;
     }
     .envelope.open .flap {
       transform: rotateX(-180deg);
@@ -113,7 +115,10 @@
   <div class="envelope" id="env">
     <div class="back"></div>
     <div class="flap">
-      <!-- Seule la thématique, centrée et descendue un peu -->
+      <!-- Nouvelles infos ajoutées avant la thématique -->
+      <p>Nom : Jupolli</p>
+      <p>Prénom : Emma</p>
+      <p>Adresse : Metro 8, Liberté</p>
       <p>Thématique : Birthday Time</p>
     </div>
 
