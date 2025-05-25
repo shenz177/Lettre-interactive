@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Lettre interactive</title>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Aptos&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Aptos&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
       height: 100vh;
       background: #e0e0e0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -42,11 +42,14 @@
       box-sizing: border-box;
       color: #333;
     }
+    /* Texte sur le flap : seule la partie avant ":" est en gras */
     .flap p {
       margin: 10px 0;
       font-size: 32px;
-      font-weight: bold;
       font-style: italic;
+    }
+    .flap p strong {
+      font-weight: bold;
     }
     .envelope.open .flap {
       transform: rotateX(-180deg);
@@ -92,14 +95,12 @@
     .letter .author {
       margin-top: 40px;
       font-family: 'Dancing Script', cursive;
-      font-size: 28px;
+      font-size: 36px;
       font-weight: bold;
       text-decoration: none;
     }
     .button {
-      position: absolute;
-      bottom: -70px;
-      width: 100%;
+      margin-top: 20px;
       text-align: center;
     }
     .button button {
@@ -113,34 +114,27 @@
   <div class="envelope" id="env">
     <div class="back"></div>
     <div class="flap">
-      <!-- Page de garde : infos en Dancing Script -->
-      <p>Nom : Jupolli</p>
-      <p>Prénom : Emma</p>
-      <p>Adresse : Metro 8, Liberté</p>
-      <p>Thématique : Birthday Time</p>
+      <!-- Seule la partie avant ":" est en <strong> -->
+      <p><strong>Nom</strong> : Jupolli</p>
+      <p><strong>Prénom</strong> : Emma</p>
+      <p><strong>Adresse</strong> : Metro 8, Liberté</p>
+      <p><strong>Thématique</strong> : Birthday Time</p>
     </div>
 
     <div class="letter">
-      <!-- Contenu de la lettre -->
+      <!-- Votre lettre ici -->
       <p>Chère Emma,</p>
-
       <h4>Les consignes</h4>
       <p>Tu as le droit à cinq questions...</p>
-
       <h4>Un conseil ?</h4>
       <p>Reste forte sur tes pâtes...</p>
-
       <h4>L’info du jour</h4>
       <p>Tout le monde est au courant...</p>
-
       <h4>Un dernier mot</h4>
       <p>…</p>
-
       <h4 class="underline">Type de question valable :</h4>
       <p><em>POURQUOI ?</em></p>
-
       <p>Bon courage et bienvenue à bord de ce Birthday Time deuxième édition !</p>
-
       <p class="author">Majmuni</p>
       <p class="author">Shendrit Berisha</p>
     </div>
