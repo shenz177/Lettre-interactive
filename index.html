@@ -38,17 +38,16 @@
       transform-origin: top center;
       z-index: 2;
       font-family: 'Dancing Script', cursive;
-      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       box-sizing: border-box;
-      color: #333;
     }
     .flap p {
-      margin: 10px 0;
-      font-size: 32px;
-      font-style: italic;
-    }
-    .flap p strong {
+      font-size: 48px;
       font-weight: bold;
+      font-style: italic;
+      margin: 0;
     }
     .envelope.open .flap {
       transform: rotateX(-180deg);
@@ -114,10 +113,8 @@
   <div class="envelope" id="env">
     <div class="back"></div>
     <div class="flap">
-      <p><strong>Nom</strong> : Jupolli</p>
-      <p><strong>Prénom</strong> : Emma</p>
-      <p><strong>Adresse</strong> : Metro 8, Liberté</p>
-      <p><strong>Thématique</strong> : Birthday Time</p>
+      <!-- Seule la thématique, centrée et descendue un peu -->
+      <p>Thématique : Birthday Time</p>
     </div>
 
     <div class="letter">
@@ -144,17 +141,12 @@
       <h4>L’info du jour</h4>
       <p>Tout le monde est au courant…</p>
 
-      <!-- Dernier mot -->
-      <h4>Un dernier mot</h4>
-      <p>…</p>
-
-      <!-- Type de question -->
-      <h4 class="underline">Type de question valable :</h4>
-      <p><em>POURQUOI ?</em></p>
+      <!-- Dernier mot ajusté -->
+      <h4>Un dernier mot ...</h4>
 
       <!-- Conclusion & signatures -->
       <p>Bon courage et bienvenue à bord de ce Birthday Time deuxième édition !</p>
-      <p class="author">Majmuni</p>
+      <p class="author">Majmuni,</p>
       <p class="author">Shendrit Berisha</p>
     </div>
   </div>
