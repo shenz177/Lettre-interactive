@@ -38,18 +38,29 @@
       transform-origin: top center;
       z-index: 2;
       font-family: 'Dancing Script', cursive;
+      box-sizing: border-box;
+      padding: 30px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      padding: 0 30px;
     }
+    /* Étiquettes en gras, alignement spécifique */
     .flap p {
       font-size: 48px;
-      font-weight: bold;
       font-style: italic;
       margin: 5px 0;
+    }
+    .flap p:first-child,
+    .flap p:nth-child(2),
+    .flap p:nth-child(3) {
+      text-align: left;
+      margin-left: 30px;
+    }
+    .flap p strong {
+      font-weight: bold;
+    }
+    .flap p.theme {
+      text-align: center;
+      margin-top: auto;
     }
     .envelope.open .flap {
       transform: rotateX(-180deg);
@@ -115,11 +126,12 @@
   <div class="envelope" id="env">
     <div class="back"></div>
     <div class="flap">
-      <!-- Nouvelles infos ajoutées avant la thématique -->
-      <p>Nom : Jupolli</p>
-      <p>Prénom : Emma</p>
-      <p>Adresse : Metro 8, Liberté</p>
-      <p>Thématique : Birthday Time</p>
+      <!-- Infos alignées à gauche -->
+      <p><strong>Nom :</strong> Jupolli</p>
+      <p><strong>Prénom :</strong> Emma</p>
+      <p><strong>Adresse :</strong> Metro 8, Liberté</p>
+      <!-- Thématique centrée en bas du flap -->
+      <p class="theme"><strong>Thématique :</strong> Birthday Time</p>
     </div>
 
     <div class="letter">
@@ -131,23 +143,23 @@
 
       <!-- Consignes -->
       <h4>Les consignes</h4>
-      <p>Tu as le droit à cinq questions...</p>
+      <p>Tu as le droit à cinq questions</p>
       <p>
         Attention, la question sera valide seulement si elle contient un seul mot suivi d’un point d’interrogation.<br>
         Un type de question possible : <em>POURQUOI ?</em><br>
-        Je me ferai le plus grand plaisir de répondre à chacune de tes questions… 🙃
+        Je me ferai le plus grand plaisir de répondre à chacune de tes questions… À MA MANIÈRE 🙃
       </p>
 
       <!-- Conseil -->
       <h4>Un conseil ?</h4>
-      <p>Reste forte sur tes pattes…</p>
+      <p>Reste forte sur tes pattes</p>
 
       <!-- Info du jour -->
       <h4>L’info du jour</h4>
       <p>Tout le monde est au courant…</p>
 
       <!-- Dernier mot ajusté -->
-      <h4>Un dernier mot ...</h4>
+      <h4>Un dernier mot </h4>
 
       <!-- Conclusion & signatures -->
       <p>Bon courage et bienvenue à bord de ce Birthday Time deuxième édition !</p>
